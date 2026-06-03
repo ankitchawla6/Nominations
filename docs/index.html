@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cialfo Student Nomination — School Counselor</title>
+<style>
+/* ── TOKENS ────────────────────────────────────────────────── */
+:root {
+  --navy:    #0f2161;
+  --blue:    #1886df;
+  --mid-blue:#1458b7;
+  --lt-blue: #d3eeff;
+  --purple:  #6c41d6;
+  --yellow:  #f6b51b;
+  --gold:    #e0981c;
+  --gray-dk: #414042;
+  --gray-md: #77787b;
+  --gray-lt: #e8e9ec;
+  --off-wh:  #f6f7fb;
+  --white:   #ffffff;
+
+  --grad-deep:     linear-gradient(135deg,#0f2161 0%,#1886df 100%);
+  --grad-royal:    linear-gradient(135deg,#0f2161 0%,#6c41d6 100%);
+  --grad-twilight: linear-gradient(135deg,#1886df 0%,#6c41d6 100%);
+  --grad-sky:      linear-gradient(135deg,#1886df 0%,#18bddf 100%);
+
+  --serif:   'GeorgiaPro','Georgia','Times New Roman',serif;
+  --display: 'RobotoC','Roboto',system-ui,sans-serif;
+  --sans:    'Roboto',system-ui,-apple-system,sans-serif;
+
+  --shadow-md: 0 8px 24px rgba(15,33,97,.10);
+  --shadow-lg: 0 20px 50px rgba(15,33,97,.14);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0b122f;padding:28px}
+main.deck section{font-family:var(--sans);-webkit-font-smoothing:antialiased;min-height:100vh;display:grid;place-items:center;padding:24px 0}
+.slide{width:min(calc(100vw - 56px), calc((100vh - 48px) * 16 / 9));aspect-ratio:16 / 9;height:auto;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.28)}
+
+/* Eyebrow */
+.eyebrow{
+  font-family:var(--display);font-weight:700;
+  font-size:24px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--blue);
+}
+.eyebrow.on-dark{color:var(--yellow)}
+
+/* Slide number */
+.slide-num{font-family:var(--display);font-weight:700;font-size:24px;color:var(--gray-md);letter-spacing:.04em}
+
+/* Accent bar */
+.accent-bar{position:absolute;top:0;left:0;right:0;height:5px;background:var(--grad-deep)}
+
+/* ── ANIMATIONS ────────────────────────────────────────────── */
+@media(prefers-reduced-motion:no-preference){
+  [data-deck-active] .a-up{animation:aup .55s both}
+  [data-deck-active] .a-up:nth-child(2){animation-delay:.08s}
+  [data-deck-active] .a-up:nth-child(3){animation-delay:.16s}
+  [data-deck-active] .a-up:nth-child(4){animation-delay:.24s}
+  [data-deck-active] .a-up:nth-child(5){animation-delay:.32s}
+  [data-deck-active] .a-fade{animation:afade .7s both}
+  @keyframes aup{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  @keyframes afade{from{opacity:0}to{opacity:1}}
+}
+</style>
+</head>
+<body>
+<main class="deck">
+
+
+<!-- ══════════════════════════════════════════ SLIDE 1 – COVER -->
+<section data-label="01 Cover">
+<div class="slide" style="background:var(--navy)">
+
+  <!-- Gradient wash -->
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0f2161 40%,#1458b7 100%);opacity:.9"></div>
+
+  <!-- Circles decoration – right side -->
+  <div style="position:absolute;right:-180px;top:50%;transform:translateY(-50%);width:860px;height:860px;border:2px solid rgba(255,255,255,.08);border-radius:50%;opacity:.35;pointer-events:none"></div>
+  <div style="position:absolute;right:200px;bottom:-300px;width:500px;height:500px;border:2px solid rgba(255,255,255,.06);border-radius:50%;opacity:.3;pointer-events:none"></div>
+
+  <!-- Yellow accent stripe top -->
+  <div style="position:absolute;top:0;left:0;width:480px;height:5px;background:var(--yellow)"></div>
+
+  <!-- Logo top-left -->
+  <div style="position:absolute;top:64px;left:100px">
+    <div style="font-family:var(--display);font-weight:900;font-size:40px;letter-spacing:.04em;color:var(--white)">Cialfo</div>
+  </div>
+
+  <!-- Main content -->
+  <div class="a-fade" style="position:absolute;top:0;left:0;width:1020px;height:1080px;display:flex;flex-direction:column;justify-content:center;padding:0 100px">
+
+    <!-- Eyebrow pill -->
+    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(246,181,27,.15);border:1.5px solid rgba(246,181,27,.45);border-radius:999px;padding:10px 24px;margin-bottom:44px;width:fit-content">
+      <div style="width:8px;height:8px;background:var(--yellow);border-radius:50%;flex-shrink:0"></div>
+      <span style="font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow)">School Counselor Guide</span>
+    </div>
+
+    <!-- Title -->
+    <h1 style="font-family:var(--serif);font-weight:700;font-size:88px;line-height:1.04;letter-spacing:-.5px;color:var(--white);margin-bottom:32px">Cialfo Student<br>Success Upgrade</h1>
+
+    <!-- Subtitle -->
+    <p style="font-family:var(--sans);font-weight:400;font-size:27px;line-height:1.55;color:var(--lt-blue);max-width:660px;margin-bottom:68px">A new nomination pathway for your students — giving selected students additional expert guidance while keeping your counseling team central to the journey.</p>
+
+    <!-- Three pillars -->
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 28px">
+        <div style="width:10px;height:10px;background:var(--blue);border-radius:50%;flex-shrink:0"></div>
+        <span style="font-family:var(--sans);font-weight:500;font-size:24px;color:var(--white)">Counselor-led nominations</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 28px">
+        <div style="width:10px;height:10px;background:var(--blue);border-radius:50%;flex-shrink:0"></div>
+        <span style="font-family:var(--sans);font-weight:500;font-size:24px;color:var(--white)">Cialfo Guide support</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 28px">
+        <div style="width:10px;height:10px;background:var(--blue);border-radius:50%;flex-shrink:0"></div>
+        <span style="font-family:var(--sans);font-weight:500;font-size:24px;color:var(--white)">Progress visibility</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════ SLIDE 2 – WHAT IS CHANGING -->
+<section data-label="02 What is Changing">
+<div class="slide" style="background:var(--white)">
+  <div class="accent-bar"></div>
+
+  <div style="position:absolute;top:52px;left:100px">
+    <div style="font-family:var(--display);font-weight:900;font-size:36px;letter-spacing:.04em;color:var(--navy)">Cialfo</div>
+  </div>
+  <div style="position:absolute;top:62px;right:100px" class="slide-num">02 / 07</div>
+
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:80px 100px">
+
+    <div class="a-up" style="margin-bottom:10px"><span class="eyebrow">The Upgrade</span></div>
+    <h2 class="a-up" style="font-family:var(--serif);font-weight:700;font-size:64px;letter-spacing:-.5px;color:var(--navy);margin-bottom:14px;line-height:1.07">What is changing?</h2>
+    <p class="a-up" style="font-family:var(--sans);font-size:24px;color:var(--gray-md);margin-bottom:44px;line-height:1.45">A shift from ad-hoc student support to a structured nomination pathway.</p>
+
+    <!-- 3 columns -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;margin-bottom:32px">
+
+      <!-- Before -->
+      <div class="a-up" style="border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md)">
+        <div style="background:#e0981c;padding:20px 32px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M2 11h18M2 11l5-5M2 11l5 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span style="font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.08em;text-transform:uppercase;color:#fff">Before</span>
+          </div>
+        </div>
+        <div style="background:#fff8ec;padding:32px 32px;flex:1">
+          <p style="font-family:var(--sans);font-size:24px;line-height:1.5;color:#7c4a00">Cialfo Guide support may have been seen as a backup option for students who needed extra help.</p>
+        </div>
+      </div>
+
+      <!-- Now -->
+      <div class="a-up" style="border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md)">
+        <div style="background:var(--mid-blue);padding:20px 32px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8.5" stroke="#fff" stroke-width="1.8"/><path d="M11 7.5v4l2 2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span style="font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.08em;text-transform:uppercase;color:#fff">Now</span>
+          </div>
+        </div>
+        <div style="background:#eef5ff;padding:32px 32px">
+          <p style="font-family:var(--sans);font-size:24px;line-height:1.5;color:var(--navy)">Your school can nominate students into a clear support track with defined next steps and progress visibility.</p>
+        </div>
+      </div>
+
+      <!-- Outcome -->
+      <div class="a-up" style="border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md)">
+        <div style="background:#1a7a4a;padding:20px 32px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11.5l4.5 4.5 9.5-9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span style="font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.08em;text-transform:uppercase;color:#fff">Outcome</span>
+          </div>
+        </div>
+        <div style="background:#edfbf4;padding:32px 32px">
+          <p style="font-family:var(--sans);font-size:24px;line-height:1.5;color:#0d4a2a">More personalized student guidance, stronger application readiness, and less operational load on counselors.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Callout -->
+    <div class="a-up" style="background:var(--off-wh);border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:22px 32px">
+      <p style="font-family:var(--sans);font-size:24px;color:var(--gray-dk);line-height:1.5;font-style:italic">The school counselor remains central. The Cialfo Guide adds structured specialist support for nominated students.</p>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════ SLIDE 3 – WHO TO NOMINATE -->
+<section data-label="03 Who to Nominate">
+<div class="slide" style="background:var(--off-wh)">
+  <div class="accent-bar"></div>
+
+  <div style="position:absolute;top:52px;left:100px">
+    <div style="font-family:var(--display);font-weight:900;font-size:36px;letter-spacing:.04em;color:var(--navy)">Cialfo</div>
+  </div>
+  <div style="position:absolute;top:62px;right:100px" class="slide-num">03 / 07</div>
+
+  <!-- Decorative circle top-right -->
+  <div style="position:absolute;right:-200px;top:-200px;width:600px;height:600px;border:2px solid rgba(24,134,223,.08);border-radius:50%;opacity:.5;pointer-events:none"></div>
+
+  <div style="position:absolute;inset:0;display:flex;align-items:center;padding:80px 100px;gap:80px">
+
+    <!-- Left: title block -->
+    <div style="width:380px;flex-shrink:0">
+      <div class="a-up eyebrow" style="margin-bottom:16px">Student Profile</div>
+      <h2 class="a-up" style="font-family:var(--serif);font-weight:700;font-size:58px;letter-spacing:-.5px;color:var(--navy);line-height:1.07;margin-bottom:24px">Who should you nominate?</h2>
+      <p class="a-up" style="font-family:var(--sans);font-size:24px;line-height:1.55;color:var(--gray-md)">Students who would benefit from a more guided path, especially at critical moments in the application journey.</p>
+    </div>
+
+    <!-- Right: 5 nomination cards -->
+    <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+
+      <div class="a-up" style="background:var(--white);border:1.5px solid var(--gray-lt);border-radius:14px;padding:28px 26px;box-shadow:var(--shadow-md)">
+        <div style="width:44px;height:44px;background:linear-gradient(135deg,#1886df22,#1886df11);border:1.5px solid #1886df44;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="4" width="16" height="14" rx="2" stroke="#1886df" stroke-width="1.6"/><path d="M7 9h8M7 13h5" stroke="#1886df" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div style="font-family:var(--sans);font-weight:700;font-size:24px;color:var(--navy);margin-bottom:8px">Application planning</div>
+        <p style="font-family:var(--sans);font-size:24px;color:var(--gray-md);line-height:1.45">Students needing help with university options, timelines, or next steps.</p>
+      </div>
+
+      <div class="a-up" style="background:var(--white);border:1.5px solid var(--gray-lt);border-radius:14px;padding:28px 26px;box-shadow:var(--shadow-md)">
+        <div style="width:44px;height:44px;background:linear-gradient(135deg,#1886df22,#1886df11);border:1.5px solid #1886df44;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M5 18l4-12h4l4 12" stroke="#1886df" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 14h9" stroke="#1886df" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div style="font-family:var(--sans);font-weight:700;font-size:24px;color:var(--navy);margin-bottom:8px">SOP support</div>
+        <p style="font-family:var(--sans);font-size:24px;color:var(--gray-md);line-height:1.45">Students needing structure, review, or narrative clarity for their SOP.</p>
+      </div>
+
+      <div class="a-up" style="background:var(--white);border:1.5px solid var(--gray-lt);border-radius:14px;padding:28px 26px;box-shadow:var(--shadow-md)">
+        <div style="width:44px;height:44px;background:linear-gradient(135deg,#1886df22,#1886df11);border:1.5px solid #1886df44;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="5" y="3" width="12" height="16" rx="2" stroke="#1886df" stroke-width="1.6"/><path d="M8.5 9h5M8.5 13h3" stroke="#1886df" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div style="font-family:var(--sans);font-weight:700;font-size:24px;color:var(--navy);margin-bottom:8px">Visa readiness</div>
+        <p style="font-family:var(--sans);font-size:24px;color:var(--gray-md);line-height:1.45">Students needing support with documents, timelines, and process clarity.</p>
+      </div>
+
+      <div class="a-up" style="background:var(--white);border:1.5px solid var(--gray-lt);border-radius:14px;padding:28px 26px;box-shadow:var(--shadow-md)">
+        <div style="width:44px;height:44px;background:linear-gradient(135deg,#1886df22,#1886df11);border:1.5px solid #1886df44;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2 5h5l-4 3.5 1.5 5L11 13.5 6.5 16.5 8 11.5 4 8h5z" stroke="#1886df" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="font-family:var(--sans);font-weight:700;font-size:24px;color:var(--navy);margin-bottom:8px">After submission</div>
+        <p style="font-family:var(--sans);font-size:24px;color:var(--gray-md);line-height:1.45">Students needing help with offers, deposits, or pre-departure.</p>
+      </div>
+
+      <div class="a-up" style="grid-column:1/-1;background:linear-gradient(135deg,#0f2161,#1886df);border-radius:14px;padding:24px 28px;display:flex;align-items:center;gap:20px">
+        <div style="width:44px;height:44px;background:rgba(255,255,255,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="#fff" stroke-width="1.6"/><path d="M11 8v4M11 14.5v.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <div style="font-family:var(--sans);font-weight:700;font-size:24px;color:#fff;margin-bottom:4px">More structure needed</div>
+          <p style="font-family:var(--sans);font-size:24px;color:var(--lt-blue);line-height:1.4">Students or families who would benefit from additional confidence and follow-up.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════ SLIDE 4 – SUPPORT AREAS -->
+<section data-label="04 Support Areas">
+<div class="slide" style="background:var(--white)">
+  <div class="accent-bar"></div>
+
+  <div style="position:absolute;top:52px;left:100px">
+    <div style="font-family:var(--display);font-weight:900;font-size:36px;letter-spacing:.04em;color:var(--navy)">Cialfo</div>
+  </div>
+  <div style="position:absolute;top:62px;right:100px" class="slide-num">04 / 07</div>
+
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:80px 100px">
+
+    <div class="a-up" style="margin-bottom:8px"><span class="eyebrow">Support Areas</span></div>
+    <h2 class="a-up" style="font-family:var(--serif);font-weight:700;font-size:64px;letter-spacing:-.5px;color:var(--navy);margin-bottom:12px;line-height:1.07">What students receive</h2>
+    <p class="a-up" style="font-family:var(--sans);font-size:24px;color:var(--gray-md);margin-bottom:44px">Tailored to the student's stage and need, with three high-impact additions for your school.</p>
+
+    <!-- 3 support area cards -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;margin-bottom:28px">
+
+      <div class="a-up" style="background:var(--off-wh);border:1.5px solid var(--gray-lt);border-radius:16px;padding:36px 32px;position:relative;overflow:hidden;box-shadow:var(--shadow-md)">
+        <div style="font-family:var(--serif);font-weight:700;font-size:80px;line-height:1;margin-bottom:20px;letter-spacing:-2px;background:var(--grad-deep);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">01</div>
+        <div style="font-family:var(--sans);font-weight:700;font-size:26px;color:var(--navy);margin-bottom:12px">SOP writing and review</div>
+        <p style="font-family:var(--sans);font-size:24px;color:var(--gray-md);line-height:1.5">Structuring, refining, and strengthening the student's academic story.</p>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--grad-sky)"></div>
+      </div>
+
+      <div class="a-up" style="background:var(--off-wh);border:1.5px solid var(--gray-lt);border-radius:16px;padding:36px 32px;position:relative;overflow:hidden;box-shadow:var(--shadow-md)">
+        <div style="font-family:var(--serif);font-weight:700;font-size:80px;line-height:1;margin-bottom:20px;letter-spacing:-2px;background:var(--grad-deep);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">02</div>
+        <div style="font-family:var(--sans);font-weight:700;font-size:26px;color:var(--navy);margin-bottom:12px">End-to-end visa support</div>
+        <p style="font-family:var(--sans);font-size:24px;color:var(--gray-md);line-height:1.5">Documentation guidance, timeline planning, process clarity, and readiness support.</p>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--grad-sky)"></div>
+      </div>
+
+      <div class="a-up" style="background:var(--off-wh);border:1.5px solid var(--gray-lt);border-radius:16px;padding:36px 32px;position:relative;overflow:hidden;box-shadow:var(--shadow-md)">
+        <div style="font-family:var(--serif);font-weight:700;font-size:80px;line-height:1;margin-bottom:20px;letter-spacing:-2px;background:var(--grad-deep);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">03</div>
+        <div style="font-family:var(--sans);font-weight:700;font-size:26px;color:var(--navy);margin-bottom:12px">Comet post-application</div>
+        <p style="font-family:var(--sans);font-size:24px;color:var(--gray-md);line-height:1.5">Offer review, deposit guidance, pre-departure prep, and next-step planning.</p>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--grad-sky)"></div>
+      </div>
+
+    </div>
+
+    <!-- Banner -->
+    <div class="a-up" style="background:linear-gradient(135deg,#0f2161,#1886df);border-radius:14px;padding:24px 36px;display:flex;align-items:center;justify-content:space-between;gap:32px">
+      <p style="font-family:var(--sans);font-size:24px;color:var(--lt-blue);line-height:1.45">Cialfo Guides help nominated students keep momentum at each stage, while counselors stay informed on key milestones.</p>
+      <div style="background:var(--yellow);border-radius:999px;padding:12px 30px;white-space:nowrap;flex-shrink:0">
+        <span style="font-family:var(--display);font-weight:700;font-size:24px;color:var(--navy);letter-spacing:.04em">Tailored by student need</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════ SLIDE 5 – PROCESS -->
+<section data-label="05 Process">
+<div class="slide" style="background:var(--off-wh)">
+  <div class="accent-bar"></div>
+
+  <div style="position:absolute;top:52px;left:100px">
+    <div style="font-family:var(--display);font-weight:900;font-size:36px;letter-spacing:.04em;color:var(--navy)">Cialfo</div>
+  </div>
+  <div style="position:absolute;top:62px;right:100px" class="slide-num">05 / 07</div>
+
+  <div style="position:absolute;left:-280px;bottom:-280px;width:640px;height:640px;border:2px solid rgba(24,134,223,.08);border-radius:50%;opacity:.5;pointer-events:none"></div>
+
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:80px 100px">
+
+    <div class="a-up" style="margin-bottom:8px"><span class="eyebrow">Process</span></div>
+    <h2 class="a-up" style="font-family:var(--serif);font-weight:700;font-size:64px;letter-spacing:-.5px;color:var(--navy);margin-bottom:64px;line-height:1.07">How the nomination pathway works</h2>
+
+    <!-- Steps -->
+    <div class="a-up" style="display:flex;align-items:flex-start;margin-bottom:48px;position:relative">
+
+      <!-- Connecting line -->
+      <div style="position:absolute;top:38px;left:148px;right:148px;height:2px;background:var(--grad-deep)"></div>
+
+      <!-- Step 1 -->
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1">
+        <div style="width:76px;height:76px;background:var(--grad-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:24px;border:5px solid var(--off-wh);box-shadow:0 0 0 2px var(--navy)">
+          <span style="font-family:var(--serif);font-weight:700;font-size:28px;color:#fff">1</span>
+        </div>
+        <div style="font-family:var(--sans);font-weight:700;font-size:26px;color:var(--navy);margin-bottom:10px">Nominate</div>
+        <p style="font-family:var(--sans);font-size:24px;color:var(--gray-md);line-height:1.45;max-width:210px">Counselor identifies students who need additional guidance.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1">
+        <div style="width:76px;height:76px;background:var(--grad-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:24px;border:5px solid var(--off-wh);box-shadow:0 0 0 2px var(--navy)">
+          <span style="font-family:var(--serif);font-weight:700;font-size:28px;color:#fff">2</span>
+        </div>
+        <div style="font-family:var(--sans);font-weight:700;font-size:26px;color:var(--navy);margin-bottom:10px">Review</div>
+        <p style="font-family:var(--sans);font-size:24px;color:var(--gray-md);line-height:1.45;max-width:210px">Cialfo Guide reviews the student's stage, goals, and support needs.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1">
+        <div style="width:76px;height:76px;background:var(--grad-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:24px;border:5px solid var(--off-wh);box-shadow:0 0 0 2px var(--navy)">
+          <span style="font-family:var(--serif);font-weight:700;font-size:28px;color:#fff">3</span>
+        </div>
+        <div style="font-family:var(--sans);font-weight:700;font-size:26px;color:var(--navy);margin-bottom:10px">Support</div>
+        <p style="font-family:var(--sans);font-size:24px;color:var(--gray-md);line-height:1.45;max-width:210px">Guide connects with the student and provides targeted guidance.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1">
+        <div style="width:76px;height:76px;background:var(--grad-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:24px;border:5px solid var(--off-wh);box-shadow:0 0 0 2px var(--navy)">
+          <span style="font-family:var(--serif);font-weight:700;font-size:28px;color:#fff">4</span>
+        </div>
+        <div style="font-family:var(--sans);font-weight:700;font-size:26px;color:var(--navy);margin-bottom:10px">Update</div>
+        <p style="font-family:var(--sans);font-size:24px;color:var(--gray-md);line-height:1.45;max-width:210px">Counselor receives relevant progress updates and next steps.</p>
+      </div>
+
+    </div>
+
+    <!-- Callout -->
+    <div class="a-up" style="background:var(--white);border:1.5px solid var(--gray-lt);border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:22px 32px;box-shadow:var(--shadow-md)">
+      <p style="font-family:var(--sans);font-size:24px;color:var(--gray-dk);line-height:1.5;font-style:italic">The process is designed to be simple for counselors: nominate, stay informed, and continue guiding the student as the trusted school-side advisor.</p>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════ SLIDE 6 – RESPONSIBILITIES -->
+<section data-label="06 Responsibilities">
+<div class="slide" style="background:var(--white)">
+  <div class="accent-bar"></div>
+
+  <div style="position:absolute;top:52px;left:100px">
+    <div style="font-family:var(--display);font-weight:900;font-size:36px;letter-spacing:.04em;color:var(--navy)">Cialfo</div>
+  </div>
+  <div style="position:absolute;top:62px;right:100px" class="slide-num">06 / 07</div>
+
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:80px 100px">
+
+    <div class="a-up" style="margin-bottom:8px"><span class="eyebrow">Ownership</span></div>
+    <h2 class="a-up" style="font-family:var(--serif);font-weight:700;font-size:64px;letter-spacing:-.5px;color:var(--navy);margin-bottom:12px;line-height:1.07">Clear responsibilities</h2>
+    <p class="a-up" style="font-family:var(--sans);font-size:24px;color:var(--gray-md);margin-bottom:44px">Designed to remove ambiguity and make support easier for your school team.</p>
+
+    <!-- 3 role cards -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;margin-bottom:28px">
+
+      <!-- School Counselor -->
+      <div class="a-up" style="border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md)">
+        <div style="background:var(--grad-deep);padding:24px 32px;display:flex;align-items:center;gap:14px">
+          <div style="width:42px;height:42px;background:rgba(255,255,255,.18);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="7" r="3.5" stroke="#fff" stroke-width="1.5"/><path d="M4 19c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <span style="font-family:var(--display);font-weight:700;font-size:24px;color:#fff">School Counselor</span>
+        </div>
+        <div style="background:var(--off-wh);padding:30px 32px">
+          <p style="font-family:var(--sans);font-size:24px;line-height:1.6;color:var(--gray-dk)">Identifies students for nomination, shares school-side context where needed, and remains the trusted advisor throughout the journey.</p>
+        </div>
+      </div>
+
+      <!-- Cialfo Guide -->
+      <div class="a-up" style="border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md)">
+        <div style="background:var(--grad-royal);padding:24px 32px;display:flex;align-items:center;gap:14px">
+          <div style="width:42px;height:42px;background:rgba(255,255,255,.18);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2 5h5l-4 3.5 1.5 5.5L11 14 6.5 17 8 11.5 4 8h5z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <span style="font-family:var(--display);font-weight:700;font-size:24px;color:#fff">Cialfo Guide</span>
+        </div>
+        <div style="background:var(--off-wh);padding:30px 32px">
+          <p style="font-family:var(--sans);font-size:24px;line-height:1.6;color:var(--gray-dk)">Owns nominated student progression across application readiness, SOP review, visa guidance, and post-application next steps.</p>
+        </div>
+      </div>
+
+      <!-- K12 Client Partner -->
+      <div class="a-up" style="border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md)">
+        <div style="background:linear-gradient(135deg,#e0981c,#f6b51b);padding:24px 32px;display:flex;align-items:center;gap:14px">
+          <div style="width:42px;height:42px;background:rgba(255,255,255,.25);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="8" width="16" height="10" rx="2" stroke="#0f2161" stroke-width="1.5"/><path d="M7 8V6a4 4 0 018 0v2" stroke="#0f2161" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <span style="font-family:var(--display);font-weight:700;font-size:24px;color:var(--navy)">K12 Client Partner</span>
+        </div>
+        <div style="background:var(--off-wh);padding:30px 32px">
+          <p style="font-family:var(--sans);font-size:24px;line-height:1.6;color:var(--gray-dk)">Owns the school relationship and remains your main contact for partnership, platform, and school-level support.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Callout -->
+    <div class="a-up" style="background:var(--off-wh);border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:22px 32px">
+      <p style="font-family:var(--sans);font-size:24px;color:var(--gray-dk);line-height:1.5;font-style:italic">Your counselor team leads the relationship with the student; Cialfo Guide adds specialist support; your Client Partner keeps the school partnership running smoothly.</p>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════ SLIDE 7 – CLOSE / CTA -->
+<section data-label="07 Thank You">
+<div class="slide" style="background:var(--navy)">
+
+  <!-- Gradient wash -->
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0f2161 35%,#1458b7 100%);opacity:.95"></div>
+
+  <!-- Circles decorations -->
+  <div style="position:absolute;right:-200px;top:50%;transform:translateY(-50%);width:840px;height:840px;border:2px solid rgba(255,255,255,.08);border-radius:50%;opacity:.35;pointer-events:none"></div>
+  <div style="position:absolute;left:-300px;bottom:-300px;width:700px;height:700px;border:2px solid rgba(255,255,255,.05);border-radius:50%;opacity:.3;pointer-events:none"></div>
+
+  <!-- Yellow top bar -->
+  <div style="position:absolute;top:0;right:0;width:480px;height:5px;background:var(--yellow)"></div>
+
+  <!-- Logo top-left -->
+  <div style="position:absolute;top:64px;left:100px">
+    <div style="font-family:var(--display);font-weight:900;font-size:40px;letter-spacing:.04em;color:var(--white)">Cialfo</div>
+  </div>
+
+  <!-- Main content -->
+  <div class="a-fade" style="position:absolute;top:0;left:0;width:1100px;height:1080px;display:flex;flex-direction:column;justify-content:center;padding:0 100px">
+
+    <!-- Eyebrow -->
+    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(246,181,27,.15);border:1.5px solid rgba(246,181,27,.45);border-radius:999px;padding:10px 24px;margin-bottom:40px;width:fit-content">
+      <div style="width:8px;height:8px;background:var(--yellow);border-radius:50%;flex-shrink:0"></div>
+      <span style="font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow)">Next Step</span>
+    </div>
+
+    <!-- Title -->
+    <h2 style="font-family:var(--serif);font-weight:700;font-size:76px;line-height:1.06;letter-spacing:-.5px;color:var(--white);margin-bottom:28px">Start nominating students<br>for additional support</h2>
+
+    <!-- Subtitle -->
+    <p style="font-family:var(--sans);font-weight:400;font-size:26px;line-height:1.55;color:var(--lt-blue);max-width:740px;margin-bottom:60px">Your Cialfo Client Partner will share the nomination process and help identify which students may benefit most from the new support pathway.</p>
+
+    <!-- Pathway pills -->
+    <div style="display:flex;align-items:center;gap:0;margin-bottom:80px">
+      <div style="background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:999px;padding:14px 30px">
+        <span style="font-family:var(--display);font-weight:700;font-size:24px;color:var(--white)">Nominate</span>
+      </div>
+      <svg width="44" height="20" viewBox="0 0 44 20" fill="none"><path d="M4 10h36M32 4l6 6-6 6" stroke="#ffffff44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div style="background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:999px;padding:14px 30px">
+        <span style="font-family:var(--display);font-weight:700;font-size:24px;color:var(--white)">Guide support</span>
+      </div>
+      <svg width="44" height="20" viewBox="0 0 44 20" fill="none"><path d="M4 10h36M32 4l6 6-6 6" stroke="#ffffff44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div style="background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:999px;padding:14px 30px">
+        <span style="font-family:var(--display);font-weight:700;font-size:24px;color:var(--white)">Student progress</span>
+      </div>
+    </div>
+
+    <!-- Thank you -->
+    <div style="font-family:var(--serif);font-weight:700;font-size:42px;letter-spacing:-.3px;color:rgba(255,255,255,.18)">Thank you</div>
+
+  </div>
+
+</div>
+</section>
+
+
+</main>
+<script>
+document.querySelectorAll("main.deck section").forEach((section, index) => {
+  if (index === 0) section.setAttribute("data-deck-active", "");
+});
+</script>
+</body>
+</html>
