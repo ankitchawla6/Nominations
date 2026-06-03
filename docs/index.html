@@ -35,7 +35,8 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#0b122f;padding:28px}
 main.deck section{font-family:var(--sans);-webkit-font-smoothing:antialiased;min-height:100vh;display:grid;place-items:center;padding:24px 0}
-.slide{width:min(calc(100vw - 56px), calc((100vh - 48px) * 16 / 9));aspect-ratio:16 / 9;height:auto;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.28)}
+.slide-frame{overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.28)}
+.slide{width:1920px;height:1080px;position:relative;overflow:hidden;transform-origin:top left}
 
 /* Eyebrow */
 .eyebrow{
@@ -523,8 +524,34 @@ main.deck section{font-family:var(--sans);-webkit-font-smoothing:antialiased;min
 </main>
 <script>
 document.querySelectorAll("main.deck section").forEach((section, index) => {
+  const slide = section.querySelector(".slide");
+  if (slide) {
+    const frame = document.createElement("div");
+    frame.className = "slide-frame";
+    slide.parentNode.insertBefore(frame, slide);
+    frame.appendChild(slide);
+  }
   if (index === 0) section.setAttribute("data-deck-active", "");
 });
+
+function layoutSlides() {
+  const availableWidth = Math.max(window.innerWidth - 56, 320);
+  const availableHeight = Math.max(window.innerHeight - 48, 180);
+  const scale = Math.min(availableWidth / 1920, availableHeight / 1080);
+
+  document.querySelectorAll(".slide-frame").forEach((frame) => {
+    frame.style.width = `${1920 * scale}px`;
+    frame.style.height = `${1080 * scale}px`;
+
+    const slide = frame.querySelector(".slide");
+    if (slide) {
+      slide.style.transform = `scale(${scale})`;
+    }
+  });
+}
+
+window.addEventListener("resize", layoutSlides);
+layoutSlides();
 </script>
 </body>
 </html>
